@@ -49,6 +49,18 @@ let products = [
         name: 'Chole Bhature',
         image: '6.jpeg',
         price: 140
+    },
+    {
+        id:7,
+        name: "Kabab Parathe",
+        image:"7.jpeg",
+        price:80 
+    },
+    {
+        id:8,
+        name: 'Bati Chokha',
+        image:'8.jpeg',
+        price:140
     }
 ];
 let listCards = [];

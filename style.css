@@ -44,6 +44,31 @@ img {
     backdrop-filter: blur(20px);
 }
 
+.header-right .btn{
+    width: 100px;
+    height: 40px;
+    font-weight: 400;
+    background:rgba(201, 21, 21, 0);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3 ease;
+
+}
+#registerBtn{
+    margin-left: 15px;
+}
+#loginBtn{
+    margin-left: 20px;
+}
+.btn.white-Btn{
+    background: rgba(255, 3, 3, 0.7);
+}
+.btn:hover{
+    color: #ff8243;
+    background: #f3f3f5;
+    box-shadow: inset 8px 8px 12px #e2e2e2, inset -8px -8px 12px #ffffff;
+}
 .main-navigation {
     display: flex;
     width: 100%;
@@ -118,18 +143,7 @@ ul {
     align-items: center;
 }
 
-.header-btn {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    border-radius: 10px;
-    position: relative;
-    margin-left: 20px;
-    transition: 0.3s;
-    box-shadow: inset 6px 6px 7px #dadada, inset -6px -6px 7px #ffffff;
-    align-items: center;
-}
+
 
 .cart-number {
     position: absolute;
@@ -1847,4 +1861,30 @@ p {
     .blog-box {
         padding: 20px;
     }
+}
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+}
+.register-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out
+}
+.top span{
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+}
+.top span a{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 5px;
 }
