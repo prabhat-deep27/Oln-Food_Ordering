@@ -18,49 +18,64 @@ let products = [
         id: 1,
         name: 'Momows',
         image: '1.jpeg',
-        price: 120
+        price: 120,
+        category: 'chinese'
     },
     {
         id: 2,
         name: 'Chowien',
         image: '2.jpeg',
-        price: 360
+        price: 360,
+        category: 'chinese'
     },
     {
         id: 3,
         name: 'Dosa',
         image: '3.jpeg',
-        price: 160
+        price: 160,
+        category: 'south indian'
     },
     {
         id: 4,
         name: 'Pav Bhaji',
         image: '4.jpeg',
-        price: 200
+        price: 200,
+        category: 'indian'
     },
     {
         id: 5,
         name: 'Masala Chap',
         image: '5.jpeg',
-        price: 240
+        price: 240,
+        category: 'indian'
     },
     {
         id: 6,
         name: 'Chole Bhature',
         image: '6.jpeg',
-        price: 140
+        price: 140,
+        category: 'indian'
     },
     {
         id:7,
         name: "Kabab Parathe",
         image:"7.jpeg",
-        price:80 
+        price:80,
+        category: 'indian' 
     },
     {
         id:8,
         name: 'Bati Chokha',
         image:'8.jpeg',
-        price:140
+        price:140,
+        category: 'indian'
+    },
+    {
+        id: 9,
+        name: 'Red Sauce Pasta',
+        image: '9.jpeg',
+        price: 240,
+        category: 'chinese'
     }
 ];
 let listCards = [];
@@ -68,6 +83,7 @@ function initApp(){
     products.forEach((value, key)=>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
+        newDiv.id = value.category.replace(/\s+/g, '-').toLowerCase();
         newDiv.innerHTML = `
         <img src = "Cart/image/${value.image}"/>
         <div class = "title">${value.name}</div>
@@ -120,3 +136,17 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 }
+
+function filterByCategory(category) {
+    let items = document.querySelectorAll('.item');
+    items.forEach(item => {
+        if (category === 'all' || item.id === category.toLowerCase()) {
+            item.style.display = 'inline-block'; // Show the item
+        } else {
+            item.style.display = 'none';  // Hide the item
+        }
+    });
+}
+
+
+filterByCategory('all');

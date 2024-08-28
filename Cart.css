@@ -32,7 +32,9 @@ header .shopping span{
     padding: 3px 10px;
 }
 .list{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     row-gap: 20px;
@@ -137,4 +139,60 @@ header .shopping span{
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
+}
+
+.nav {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0; /* Padding on top and bottom */
+    text-align: center; /* Center align the text */
+    border-radius: 8px; /* Rounded corners for the nav container */
+    box-shadow: 0 4px 8px rgba(102, 45, 45, 0.2); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the nav bar with margin */
+    width: 90%; /* Set a max-width to control the nav bar width */
+    max-width: 800px; /* Prevent the nav bar from becoming too wide */
+}
+
+.header-menu {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.food.nav-menu {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Wrap items on small screens */
+    gap: 10px; /* Space between items */
+}
+
+.food.nav-menu a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Padding around each link */
+    font-size: 16px; /* Font size for the links */
+    display: inline-block; /* Ensure padding is clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 4px; /* Slightly rounded corners for each link */
+}
+
+.food.nav-menu a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+.food.nav-menu a.active {
+    background-color: #cfb5b5; /* Different color for active link */
+    font-weight: bold; /* Bold text for active link */
+}
+
+@media (max-width: 600px) {
+    .food.nav-menu a {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Smaller font size for smaller screens */
+    }
+
+    .nav {
+        width: 100%; /* Full width on small screens */
+        padding: 10px; /* Reduced padding on small screens */
+        box-shadow: none; /* Remove shadow on small screens */
+    }
 }
