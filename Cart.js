@@ -76,7 +76,29 @@ let products = [
         image: '9.jpeg',
         price: 240,
         category: 'chinese'
+    },
+    {
+        id: 10,
+        name: 'Idli',
+        image: '10.jpeg',
+        price: 130,
+        category: 'south indian'
+    },
+    {
+        id: 11,
+        name: 'Uttapam',
+        image: '11.jpeg',
+        price: 150,
+        category: 'south indian'
+    },
+    {
+        id: 12,
+        name: 'Vada',
+        image: '12.jpeg',
+        price: 100,
+        category: 'south indian'
     }
+
 ];
 let listCards = [];
 function initApp(){
